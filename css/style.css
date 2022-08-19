@@ -326,6 +326,24 @@ body {
     -webkit-background-clip: text;
     color: transparent; }
 
+.story {
+  margin: 0 auto;
+  padding: 6rem;
+  width: 75%;
+  background-color: #fff;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  font-size: 1.6rem; }
+  .story__shape {
+    float: left;
+    width: 15rem;
+    height: 15rem;
+    background-color: orangered;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -389,4 +407,8 @@ body {
 .section-tours {
   padding: 25rem 0 15rem 0;
   margin-top: -15rem;
+  background-color: #f7f7f7; }
+
+.section-stories {
+  padding: 15rem 0;
   background-color: #f7f7f7; }
