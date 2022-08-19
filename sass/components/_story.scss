@@ -1,20 +1,58 @@
 .story {
 	margin: 0 auto;
 	padding: 6rem;
+	padding-left: 9rem;
 	width: 75%;
-	background-color: $color-white;
-	box-shadow: 0 3rem 6rem rgba($color-black, 0.15);
-	border-radius: 3px;
+	background-color: rgba($color-white, 0.6);
+	box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
 	font-size: $default-font-size;
+	border-radius: 3px;
+	transform: skewX(-12deg);
 
 	&__shape {
+		position: relative;
 		float: left;
 		width: 15rem;
 		height: 15rem;
-		background-color: orangered;
 		-webkit-clip-path: circle(50% at 50% 50%);
 		clip-path: circle(50% at 50% 50%);
 		-webkit-shape-outside: circle(50% at 50% 50%);
 		shape-outside: circle(50% at 50% 50%);
+		transform: translateX(-3rem) skewX(12deg);
+		overflow: hidden;
+	}
+
+	&__img {
+		height: 100%;
+		backface-visibility: hidden;
+		transform: translateX(-4rem) scale(1.4);
+		transition: transform 0.5s ease;
+	}
+
+	&__text {
+		transform: skewX(12deg);
+	}
+
+	&__caption {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, 20%);
+		font-size: 1.7rem;
+		color: $color-white;
+		text-transform: uppercase;
+		text-align: center;
+		backface-visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.3s ease, transform 0.3s ease;
+	}
+
+	&:hover &__caption {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+
+	&:hover &__img {
+		transform: translateX(-4rem);
 	}
 }
