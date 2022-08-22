@@ -340,6 +340,19 @@ body {
     -webkit-background-clip: text;
     color: transparent; }
 
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  padding: 1.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: inherit;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 2px; }
+  .form__input:focus {
+    outline: none; }
+
 .story {
   margin: 0 auto;
   padding: 6rem;
