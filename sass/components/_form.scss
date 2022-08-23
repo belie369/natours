@@ -4,18 +4,46 @@
 	}
 
 	&__input {
+		display: block;
 		padding: 1.5rem 2rem;
+		width: 90%;
+		color: $color-black;
 		background-color: rgba($color-white, 0.5);
 		font-family: inherit;
 		font-size: 1.5rem;
 		border: none;
 		border-radius: 2px;
+		border-bottom: 3px solid transparent;
+		transition: border-bottom 0.3s, box-shadow 0.3s;
 
 		&:focus {
 			outline: none;
+			box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+			border-bottom: 3px solid $color-primary;
+		}
+
+		&:focus:invalid {
+			border-bottom: 3px solid $color-secondary-dark;
+		}
+
+		&::-webkit-input-placeholder {
+			color: $color-grey-dark-2;
 		}
 	}
 
 	&__label {
+		display: block;
+		margin-top: 0.7rem;
+		margin-left: 2rem;
+		font-size: 1.2rem;
+		font-weight: 700;
+		transform: translateY(0);
+		transition: opacity 0.3s, visability 0.3s, transform 0.3s;
+	}
+
+	&__input:placeholder-shown + &__label {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-4rem);
 	}
 }
