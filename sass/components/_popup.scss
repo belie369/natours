@@ -5,6 +5,9 @@
 	height: 100vh;
 	width: 100%;
 	background-color: rgba($color-black, 0.8);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s, visibility 0.3s;
 	z-index: 100;
 
 	&__content {
@@ -16,6 +19,8 @@
 		box-sizing: 0 2rem 4rem rgba($color-black, 0.2);
 		border-radius: 3px;
 		overflow: hidden;
+		// transform: translate(-50%, -50%), scale(0.25);
+		opacity: 0;
 	}
 
 	&__left {
@@ -47,5 +52,34 @@
 		-ms-hyphens: auto;
 		-webkit-hyphens: auto;
 		hyphens: auto; //manual; auto działa w zależności od ustawionego języka dokumentu
+	}
+
+	//Open states
+	&:target {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&:target &__content {
+	}
+
+	&__close {
+		&:link,
+		&:visited {
+			display: inline-block;
+			position: absolute;
+			top: 2.5rem;
+			right: 2.5rem;
+			color: $color-grey-dark;
+			font-size: 3rem;
+			text-decoration: none;
+			line-height: 1;
+			transition: color 0.2s;
+		}
+
+		&:hover,
+		&:active {
+			color: $color-primary;
+		}
 	}
 }
