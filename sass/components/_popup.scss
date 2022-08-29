@@ -19,8 +19,9 @@
 		box-sizing: 0 2rem 4rem rgba($color-black, 0.2);
 		border-radius: 3px;
 		overflow: hidden;
-		// transform: translate(-50%, -50%), scale(0.25);
 		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.25);
+		transition: opacity 0.5s 0.2s, transform 0.5s 0.2s;
 	}
 
 	&__left {
@@ -61,6 +62,8 @@
 	}
 
 	&:target &__content {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
 	}
 
 	&__close {
