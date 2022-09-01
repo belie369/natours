@@ -391,13 +391,15 @@ body {
 
 .feature-box {
   padding: 2.5rem;
-  min-height: 36rem;
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s; }
+  @media only screen and (max-width: 56.25em) {
+    .feature-box {
+      padding: 2rem; } }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
   .feature-box__icon {
@@ -408,6 +410,9 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent; }
+    @media only screen and (max-width: 56.25em) {
+      .feature-box__icon {
+        margin-bottom: 0; } }
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
@@ -853,7 +858,7 @@ body {
     transform: skewY(7deg); }
   @media only screen and (max-width: 56.25em) {
     .section-feature {
-      padding: 15rem 0; } }
+      padding: 10rem 0; } }
 
 .section-tours {
   padding: 25rem 0 15rem 0;
