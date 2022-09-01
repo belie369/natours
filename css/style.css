@@ -586,6 +586,9 @@ body {
       padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__logo-box {
+        margin-bottom: 6rem; } }
   .footer__logo {
     width: 15rem; }
   .footer__navigation {
