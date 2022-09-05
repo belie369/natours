@@ -598,6 +598,14 @@ body {
   font-size: 1.6rem;
   border-radius: 3px;
   transform: skewX(-12deg); }
+  @media only screen and (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .story {
+      transform: skewX(0); } }
   .story__shape {
     position: relative;
     float: left;
@@ -609,6 +617,9 @@ body {
     shape-outside: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     overflow: hidden; }
+    @media only screen and (max-width: 37.5em) {
+      .story__shape {
+        transform: translateX(-3rem) skewX(0deg); } }
   .story__img {
     height: 100%;
     backface-visibility: hidden;
@@ -616,6 +627,9 @@ body {
     transition: transform 0.5s ease, filter 0.5s ease; }
   .story__text {
     transform: skewX(12deg); }
+    @media only screen and (max-width: 37.5em) {
+      .story__text {
+        transform: skewX(0); } }
   .story__caption {
     position: absolute;
     top: 50%;
